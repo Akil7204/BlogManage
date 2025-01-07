@@ -19,7 +19,9 @@ function App() {
   const [token,setToken] = useState(false)
   const location = useLocation();
   useEffect(()=>{
-    const isToken = Cookies.get('token');
+    // const isToken = Cookies.get('token');
+    const isToken = localStorage.getItem('user');
+
     console.log(isToken);
 
     if(isToken){

@@ -50,6 +50,7 @@ const Login = () => {
         { withCredentials: true }
       );
       setUser(res.data);
+      localStorage.setItem('user',JSON.stringify(res.data))
       toast.success("Login successful!");
     } catch (err) {
       setError(true);
