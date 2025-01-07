@@ -13,7 +13,6 @@ const CreatePost = () => {
     const { user } = useContext(UserContext);
     const navigate = useNavigate();
 
-    // react-hook-form setup
     const {
         register,
         handleSubmit,
