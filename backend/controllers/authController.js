@@ -36,7 +36,7 @@ export const login = async (req, res) => {
             { expiresIn: "3d" }
         );
         const { password, ...info } = user._doc;
-        res.cookie("token", token, {domain: "https://blog-manage.vercel.app"}).status(200).json(info);
+        res.cookie("token", token, { sameSite: "none", secure: true }).status(200).json(info);
     } catch (err) {
         res.status(500).json(err);
     }
